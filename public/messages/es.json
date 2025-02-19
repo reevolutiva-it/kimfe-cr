@@ -1,11 +1,11 @@
-export const messages = {
-  common: {
-    "dashboard": "Panel de Control",
+{
+  "common": {
+    "dashboard": "Panel",
     "agents": "Agentes",
     "conversations": "Conversaciones",
     "analytics": "Análisis",
     "team": "Equipo",
-    "settings": "Configuración",
+    "settings": "Ajustes",
     "help": "Ayuda",
     "save": "Guardar Cambios",
     "cancel": "Cancelar",
@@ -17,8 +17,8 @@ export const messages = {
     "evaluate": "Evaluar"
   },
   "dashboard": {
-    "title": "Panel de Control",
-    "subtitle": "Monitorea el rendimiento y la actividad de tus agentes IA",
+    "title": "Panel",
+    "subtitle": "Monitorea el rendimiento de tus agentes IA",
     "stats": {
       "totalAgents": "Total de Agentes",
       "activeUsers": "Usuarios Activos",

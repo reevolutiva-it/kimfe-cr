@@ -70,7 +70,7 @@ export function CreateAgentModal({
                 {initialData ? "Edit Agent" : "Create New Agent"}
               </Dialog.Title>
               <Dialog.Close asChild>
-                <button className="text-muted-foreground hover:text-foreground">
+                <button className="text-muted-foreground hover:text-foreground" title="Close">
                   <X className="h-5 w-5" />
                 </button>
               </Dialog.Close>

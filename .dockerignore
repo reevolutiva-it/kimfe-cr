@@ -1,0 +1,4 @@
+# filepath: .dockerignore
+node_modules
+.git
+.env

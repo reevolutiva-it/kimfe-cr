@@ -1,0 +1,8 @@
+{
+  "switch": {
+    "toSpanish": "Cambiar a español",
+    "toEnglish": "Cambiar a inglés"
+  },
+  "title": "Bienvenido",
+  "description": "Esta es la descripción en español."
+}
