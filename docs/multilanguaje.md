@@ -1,12 +1,25 @@
-## Estado Actual de Implementación de Traducciones
+## Estado Actual y Mejoras en Traducciones
+
+### Cambios Realizados
+
+- Se ha unificado el sistema de traducciones mediante i18next.
+- Se elimina el LanguageProvider personalizado.
+- Se crea el archivo de configuración en `src/i18n.ts` que carga los mensajes desde `/public/messages`.
+- Se eliminan los archivos redundantes ubicados en `/locales`.
+
+### Instrucciones para Uso
+
+1. Inicializa i18next importando `src/i18n.ts` en el punto de entrada principal (p. ej., index.jsx o App.jsx).
+2. Usa el hook `useTranslation` en todos los componentes en lugar de `useLanguage`.
+3. Actualiza los textos en los componentes utilizando las claves definidas en los archivos de mensajes.
 
 ### Problemas Identificados
 
 1. **Conflicto de Sistemas de Internacionalización**
    * Se detectan múltiples implementaciones:
-     - i18next con react-i18next
-     - LanguageProvider personalizado
-     - Archivos de configuración duplicados
+     * i18next con react-i18next
+     * LanguageProvider personalizado
+     * Archivos de configuración duplicados
 
 2. **Estructura de Archivos**
    * `/src/components/language-provider.tsx`: Implementación personalizada
@@ -23,6 +36,7 @@
 ### Plan de Corrección
 
 1. **Unificar Sistema de Traducciones**
+
    ```typescript
    // Eliminar uno de los dos sistemas:
    // Opción 1: Mantener i18next (recomendado)
@@ -65,6 +79,7 @@
    ```
 
 4. **Estructura de Archivos Final**
+
    ```
    src/
    ├── i18n.ts
@@ -84,6 +99,7 @@
    * Actualizar referencias en componentes
 
 2. **Actualización de Dependencias**
+
    ```bash
    pnpm remove @types/i18next @types/react-i18next
    pnpm add i18next react-i18next i18next-http-backend

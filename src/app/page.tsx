@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useLanguage } from "@/components/language-provider";
+import { useTranslation } from "react-i18next";
 import { 
   BarChart3, 
   Users, 
@@ -87,7 +87,7 @@ const topAgents = [
 ];
 
 export default function DashboardPage() {
-  const { t } = useLanguage();
+  const { t } = useTranslation();
   return (
     <main className="min-h-screen bg-background">
       <div className="mx-auto max-w-7xl px-8 py-6">

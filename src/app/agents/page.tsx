@@ -1,18 +1,18 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useLanguage } from "@/components/language-provider";
+import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import { Plus } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { AgentCard } from "@/components/agent-card";
+import AgentCard from "@/components/agent-card";
 import { CreateAgentModal } from "@/components/create-agent-modal";
 import { Agent } from "@/types/agent";
 import { getAgents, saveAgents } from "@/lib/store";
 import toast from "react-hot-toast";
 
 export default function AgentsPage() {
-  const { t } = useLanguage();
+  const { t } = useTranslation();
   const [agents, setAgents] = useState<Agent[]>([]);
   const [isCreateModalOpen, setIsCreateModalOpen] = useState(false);
   const [editingAgent, setEditingAgent] = useState<Agent | undefined>();
@@ -69,9 +69,11 @@ export default function AgentsPage() {
           animate={{ opacity: 1, y: 0 }}
           className="mb-8"
         >
-          <h1 className="text-4xl font-bold text-foreground">Agent Archive</h1>
+          <h1 className="text-4xl font-bold text-foreground">
+            {t('agents.title')}
+          </h1>
           <p className="mt-2 text-muted-foreground">
-            Manage and configure your AI agents
+            {t('agents.subtitle')}
           </p>
         </motion.div>
 

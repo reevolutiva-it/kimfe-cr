@@ -1,0 +1,1 @@
+// Archivo eliminado: Se reemplaza el sistema personalizado por i18next.

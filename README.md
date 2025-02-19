@@ -58,7 +58,9 @@ This project is designed to help you configure and manage AI agents. It provides
   ```bash
   pnpm dev
   ```
-*
+
+-
+
 ## Configuration
 
 ### Environment Variables

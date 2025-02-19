@@ -1,11 +1,11 @@
 {
   "common": {
-    "dashboard": "Panel",
+    "dashboard": "Panel de Control",
     "agents": "Agentes",
     "conversations": "Conversaciones",
     "analytics": "Análisis",
     "team": "Equipo",
-    "settings": "Ajustes",
+    "settings": "Configuración",
     "help": "Ayuda",
     "save": "Guardar Cambios",
     "cancel": "Cancelar",
@@ -17,8 +17,8 @@
     "evaluate": "Evaluar"
   },
   "dashboard": {
-    "title": "Panel",
-    "subtitle": "Monitorea el rendimiento de tus agentes IA",
+    "title": "Panel de Control",
+    "subtitle": "Monitorea el rendimiento y la actividad de tus agentes IA",
     "stats": {
       "totalAgents": "Total de Agentes",
       "activeUsers": "Usuarios Activos",
