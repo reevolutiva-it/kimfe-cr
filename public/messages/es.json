@@ -1,5 +1,5 @@
-export const messages = {
-  common: {
+{
+  "common": {
     "dashboard": "Panel de Control",
     "agents": "Agentes",
     "conversations": "Conversaciones",

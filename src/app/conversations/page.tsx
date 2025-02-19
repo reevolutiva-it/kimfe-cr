@@ -81,7 +81,9 @@ export default function ConversationsPage() {
             />
           </div>
           <div className="flex items-center gap-2">
+            <label htmlFor="agent-select" className="sr-only">Select Agent</label>
             <select
+              id="agent-select"
               value={selectedAgent || ""}
               onChange={(e) => setSelectedAgent(e.target.value || null)}
               className="rounded-lg border bg-background px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary"

@@ -4,7 +4,7 @@ import { Agent } from "@/types/agent";
 import { Button } from "./ui/button";
 import { MessageSquare, Pencil, Star, Trash2 } from "lucide-react";
 import { motion } from "framer-motion";
-import { useLanguage } from "./language-provider";
+import { useTranslation } from "react-i18next";
 
 interface AgentCardProps {
   agent: Agent;
@@ -12,8 +12,8 @@ interface AgentCardProps {
   onDelete: (agent: Agent) => void;
 }
 
-export function AgentCard({ agent, onEdit, onDelete }: AgentCardProps) {
-  const { t } = useLanguage();
+export default function AgentCard({ agent, onEdit, onDelete }: AgentCardProps) {
+  const { t } = useTranslation();
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -36,28 +36,24 @@ export function AgentCard({ agent, onEdit, onDelete }: AgentCardProps) {
         <Button
           variant="secondary"
           size="sm"
-          onClick={() => window.location.href = `/agents/${agent.id}/config/`}
+          onClick={() => (window.location.href = `/agents/${agent.id}/config/`)}
           className="flex-1"
         >
           <Pencil className="w-4 h-4 mr-2" />
-          Configure
+          {t('common.configure')}
         </Button>
         <Button
           variant="secondary"
           size="sm"
           className="flex-1"
-          onClick={() => window.location.href = `/agents/${agent.id}/chat/`}
+          onClick={() => (window.location.href = `/agents/${agent.id}/chat/`)}
         >
           <MessageSquare className="w-4 h-4 mr-2" />
-          Chat
+          {t('common.chat')}
         </Button>
-        <Button
-          variant="secondary"
-          size="sm"
-          className="flex-1"
-        >
+        <Button variant="secondary" size="sm" className="flex-1">
           <Star className="w-4 h-4 mr-2" />
-          Evaluate
+          {t('common.evaluate')}
         </Button>
         <Button
           variant="danger"

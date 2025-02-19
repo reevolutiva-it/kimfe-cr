@@ -2,7 +2,7 @@
 
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 import { motion } from "framer-motion";
-import { useLanguage } from "./language-provider";
+import { useTranslation } from "react-i18next";
 import { 
   Bot, 
   Settings, 
@@ -56,7 +56,7 @@ const menuItems = [
 export function MainMenu() {
   const pathname = usePathname();
   const router = useRouter();
-  const { t } = useLanguage();
+  const { t } = useTranslation();
 
   return (
     <NavigationMenu.Root className="relative">
