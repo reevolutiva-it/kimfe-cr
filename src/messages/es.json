@@ -1,0 +1,25 @@
+{
+  "common": {
+    "dashboard": "Panel",
+    "agents": "Agentes",
+    "conversations": "Conversaciones",
+    "analytics": "Análisis",
+    "team": "Equipo",
+    "settings": "Ajustes",
+    "help": "Ayuda",
+    "configure": "Configurar",
+    "chat": "Chat",
+    "evaluate": "Evaluar"
+  },
+  "agents": {
+    "title": "Archivo de Agentes",
+    "subtitle": "Gestiona y configura tus agentes IA",
+    "createNew": "Crear Nuevo Agente",
+    "edit": "Editar Agente",
+    "delete": "Eliminar Agente"
+  },
+  "dashboard": {
+    "title": "Panel",
+    "subtitle": "Monitorea el rendimiento de tus agentes IA"
+  }
+}

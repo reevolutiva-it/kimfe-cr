@@ -1,0 +1,69 @@
+export const messages = {
+  common: {
+    "dashboard": "Dashboard",
+    "agents": "Agents",
+    "conversations": "Conversations",
+    "analytics": "Analytics",
+    "team": "Team",
+    "settings": "Settings",
+    "help": "Help",
+    "save": "Save Changes",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "create": "Create",
+    "configure": "Configure",
+    "chat": "Chat",
+    "evaluate": "Evaluate"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "subtitle": "Monitor your AI agents' performance and activity",
+    "stats": {
+      "totalAgents": "Total Agents",
+      "activeUsers": "Active Users",
+      "conversations": "Conversations",
+      "avgResponseTime": "Avg. Response Time"
+    },
+    "activity": {
+      "title": "Conversation Activity",
+      "subtitle": "Last 7 days conversation volume"
+    },
+    "topAgents": {
+      "title": "Top Performing Agents",
+      "subtitle": "Based on success rate",
+      "conversations": "conversations",
+      "success": "success"
+    },
+    "actions": {
+      "manageAgents": "Manage Agents",
+      "viewAnalytics": "View Detailed Analytics"
+    }
+  },
+  "agents": {
+    "title": "Agent Archive",
+    "subtitle": "Manage and configure your AI agents",
+    "createNew": "Create New Agent",
+    "form": {
+      "name": "Name",
+      "description": "Description",
+      "avatar": "Avatar URL",
+      "prompt": "Agent Prompt",
+      "welcomeMessage": "Welcome Message"
+    }
+  },
+  "chat": {
+    "placeholder": "Type your message...",
+    "enterToSend": "Press Enter to send",
+    "typing": "Typing..."
+  },
+  "config": {
+    "tabs": {
+      "knowledge": "Knowledge & Prompts",
+      "evaluations": "Evaluations",
+      "competencies": "Competencies",
+      "tools": "Tools"
+    },
+    "unsavedChanges": "You have unsaved changes"
+  }
+}

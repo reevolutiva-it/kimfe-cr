@@ -1,0 +1,25 @@
+{
+  "common": {
+    "dashboard": "Dashboard",
+    "agents": "Agents",
+    "conversations": "Conversations",
+    "analytics": "Analytics",
+    "team": "Team",
+    "settings": "Settings",
+    "help": "Help",
+    "configure": "Configure",
+    "chat": "Chat",
+    "evaluate": "Evaluate"
+  },
+  "agents": {
+    "title": "Agent Archive",
+    "subtitle": "Manage and configure your AI agents",
+    "createNew": "Create New Agent",
+    "edit": "Edit Agent",
+    "delete": "Delete Agent"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "subtitle": "Monitor your AI agents' performance and activity"
+  }
+}

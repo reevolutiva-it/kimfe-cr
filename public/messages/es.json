@@ -1,0 +1,69 @@
+export const messages = {
+  common: {
+    "dashboard": "Panel de Control",
+    "agents": "Agentes",
+    "conversations": "Conversaciones",
+    "analytics": "Análisis",
+    "team": "Equipo",
+    "settings": "Configuración",
+    "help": "Ayuda",
+    "save": "Guardar Cambios",
+    "cancel": "Cancelar",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "create": "Crear",
+    "configure": "Configurar",
+    "chat": "Chat",
+    "evaluate": "Evaluar"
+  },
+  "dashboard": {
+    "title": "Panel de Control",
+    "subtitle": "Monitorea el rendimiento y la actividad de tus agentes IA",
+    "stats": {
+      "totalAgents": "Total de Agentes",
+      "activeUsers": "Usuarios Activos",
+      "conversations": "Conversaciones",
+      "avgResponseTime": "Tiempo Promedio de Respuesta"
+    },
+    "activity": {
+      "title": "Actividad de Conversaciones",
+      "subtitle": "Volumen de conversaciones últimos 7 días"
+    },
+    "topAgents": {
+      "title": "Agentes con Mejor Desempeño",
+      "subtitle": "Basado en tasa de éxito",
+      "conversations": "conversaciones",
+      "success": "éxito"
+    },
+    "actions": {
+      "manageAgents": "Gestionar Agentes",
+      "viewAnalytics": "Ver Análisis Detallado"
+    }
+  },
+  "agents": {
+    "title": "Archivo de Agentes",
+    "subtitle": "Gestiona y configura tus agentes IA",
+    "createNew": "Crear Nuevo Agente",
+    "form": {
+      "name": "Nombre",
+      "description": "Descripción",
+      "avatar": "URL del Avatar",
+      "prompt": "Prompt del Agente",
+      "welcomeMessage": "Mensaje de Bienvenida"
+    }
+  },
+  "chat": {
+    "placeholder": "Escribe tu mensaje...",
+    "enterToSend": "Presiona Enter para enviar",
+    "typing": "Escribiendo..."
+  },
+  "config": {
+    "tabs": {
+      "knowledge": "Conocimiento y Prompts",
+      "evaluations": "Evaluaciones",
+      "competencies": "Competencias",
+      "tools": "Herramientas"
+    },
+    "unsavedChanges": "Tienes cambios sin guardar"
+  }
+}
