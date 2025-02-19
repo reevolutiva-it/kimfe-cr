@@ -22,11 +22,11 @@ export default function AgentsPage() {
   }, []);
 
   const handleDelete = (agent: Agent) => {
-    if (confirm("Are you sure you want to delete this agent?")) {
+    if (confirm(t('agents.confirmDelete'))) {
       const newAgents = agents.filter((a) => a.id !== agent.id);
       setAgents(newAgents);
       saveAgents(newAgents);
-      toast.success("Agent deleted successfully");
+      toast.success(t('agents.deleted'));
     }
   };
 
@@ -45,7 +45,7 @@ export default function AgentsPage() {
           ...editingAgent,
           ...data,
         };
-        toast.success("Agent updated successfully");
+        toast.success(t('agents.updated'));
       }
     } else {
       newAgents.push({
@@ -53,7 +53,7 @@ export default function AgentsPage() {
         id: crypto.randomUUID(),
         createdAt: new Date().toISOString(),
       });
-      toast.success("Agent created successfully");
+      toast.success(t('agents.created'));
     }
 
     setAgents(newAgents);

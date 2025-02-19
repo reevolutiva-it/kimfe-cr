@@ -1,17 +1,4 @@
-## Estado Actual y Mejoras en Traducciones
-
-### Cambios Realizados
-
-- Se ha unificado el sistema de traducciones mediante i18next.
-- Se elimina el LanguageProvider personalizado.
-- Se crea el archivo de configuración en `src/i18n.ts` que carga los mensajes desde `/public/messages`.
-- Se eliminan los archivos redundantes ubicados en `/locales`.
-
-### Instrucciones para Uso
-
-1. Inicializa i18next importando `src/i18n.ts` en el punto de entrada principal (p. ej., index.jsx o App.jsx).
-2. Usa el hook `useTranslation` en todos los componentes en lugar de `useLanguage`.
-3. Actualiza los textos en los componentes utilizando las claves definidas en los archivos de mensajes.
+## Estado Actual de Implementación de Traducciones
 
 ### Problemas Identificados
 

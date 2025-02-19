@@ -50,7 +50,11 @@
       "avatar": "Avatar URL",
       "prompt": "Agent Prompt",
       "welcomeMessage": "Welcome Message"
-    }
+    },
+    "confirmDelete": "Are you sure you want to delete this agent?",
+    "deleted": "Agent deleted successfully",
+    "updated": "Agent updated successfully",
+    "created": "Agent created successfully"
   },
   "chat": {
     "placeholder": "Type your message...",
@@ -65,5 +69,13 @@
       "tools": "Tools"
     },
     "unsavedChanges": "You have unsaved changes"
+  },
+  "conversations": {
+    "title": "Conversations",
+    "subtitle": "View and manage your chat interactions with AI agents",
+    "searchPlaceholder": "Search conversations...",
+    "allAgents": "All Agents",
+    "filters": "Filters",
+    "continueChat": "Continue Chat"
   }
 }

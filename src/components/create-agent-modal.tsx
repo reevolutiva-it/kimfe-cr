@@ -9,6 +9,8 @@ import { Agent } from "@/types/agent";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useTranslation } from "react-i18next";
+
 const agentSchema = z.object({
   name: z.string().min(1, "Name is required"),
   description: z.string().min(1, "Description is required"),
@@ -29,6 +31,7 @@ export function CreateAgentModal({
   onSubmit,
   initialData
 }: CreateAgentModalProps) {
+  const { t } = useTranslation();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const {
     register,
@@ -67,7 +70,7 @@ export function CreateAgentModal({
         }} className="fixed left-1/2 top-1/2 w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-xl bg-background p-8 shadow-2xl">
             <div className="flex items-center justify-between">
               <Dialog.Title className="text-2xl font-semibold">
-                {initialData ? "Edit Agent" : "Create New Agent"}
+                {initialData ? t('agents.edit') : t('agents.createNew')}
               </Dialog.Title>
               <Dialog.Close asChild>
                 <button className="text-muted-foreground hover:text-foreground" title="Close">
@@ -117,10 +120,10 @@ export function CreateAgentModal({
 
               <div className="flex justify-end gap-4">
                 <Dialog.Close asChild>
-                  <Button variant="secondary">Cancel</Button>
+                  <Button variant="secondary">{t('common.cancel')}</Button>
                 </Dialog.Close>
                 <Button disabled={isSubmitting}>
-                  {isSubmitting ? "Saving..." : initialData ? "Save Changes" : "Create Agent"}
+                  {isSubmitting ? t('common.saving') : initialData ? t('common.saveChanges') : t('common.createAgent')}
                 </Button>
               </div>
             </form>

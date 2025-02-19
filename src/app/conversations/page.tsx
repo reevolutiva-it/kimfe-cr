@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import { Search, Filter, Bot, User, Calendar, Clock, MessageSquare } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -39,6 +40,7 @@ const sampleConversations: Conversation[] = [
 ];
 
 export default function ConversationsPage() {
+  const { t } = useTranslation();
   const [agents, setAgents] = useState<Agent[]>([]);
   const [conversations, setConversations] = useState<Conversation[]>(sampleConversations);
   const [searchQuery, setSearchQuery] = useState("");
@@ -63,9 +65,9 @@ export default function ConversationsPage() {
           animate={{ opacity: 1, y: 0 }}
           className="mb-8"
         >
-          <h1 className="text-4xl font-bold text-foreground">Conversations</h1>
+          <h1 className="text-4xl font-bold text-foreground">{t('conversations.title')}</h1>
           <p className="mt-2 text-muted-foreground">
-            View and manage your chat interactions with AI agents
+            {t('conversations.subtitle')}
           </p>
         </motion.div>
 
@@ -74,7 +76,7 @@ export default function ConversationsPage() {
             <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
             <input
               type="text"
-              placeholder="Search conversations..."
+              placeholder={t('conversations.searchPlaceholder')}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full rounded-lg border bg-background pl-10 pr-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary"
@@ -88,7 +90,7 @@ export default function ConversationsPage() {
               onChange={(e) => setSelectedAgent(e.target.value || null)}
               className="rounded-lg border bg-background px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary"
             >
-              <option value="">All Agents</option>
+              <option value="">{t('conversations.allAgents')}</option>
               {agents.map((agent) => (
                 <option key={agent.id} value={agent.id}>
                   {agent.name}
@@ -97,7 +99,7 @@ export default function ConversationsPage() {
             </select>
             <Button variant="secondary" size="sm" className="gap-2">
               <Filter className="h-4 w-4" />
-              Filters
+              {t('conversations.filters')}
             </Button>
           </div>
         </div>
@@ -167,7 +169,7 @@ export default function ConversationsPage() {
                         size="sm"
                         onClick={() => window.location.href = `/agents/${conversation.agentId}/chat`}
                       >
-                        Continue Chat
+                        {t('conversations.continueChat')}
                       </Button>
                     </div>
                   </div>

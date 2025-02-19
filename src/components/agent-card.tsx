@@ -58,7 +58,11 @@ export default function AgentCard({ agent, onEdit, onDelete }: AgentCardProps) {
         <Button
           variant="danger"
           size="sm"
-          onClick={() => onDelete(agent)}
+          onClick={() => {
+            if (confirm(t('agents.confirmDelete'))) {
+              onDelete(agent);
+            }
+          }}
         >
           <Trash2 className="w-4 h-4" />
         </Button>

@@ -50,7 +50,11 @@
       "avatar": "URL del Avatar",
       "prompt": "Prompt del Agente",
       "welcomeMessage": "Mensaje de Bienvenida"
-    }
+    },
+    "confirmDelete": "¿Estás seguro de que deseas eliminar este agente?",
+    "deleted": "Agente eliminado con éxito",
+    "updated": "Agente actualizado con éxito",
+    "created": "Agente creado con éxito"
   },
   "chat": {
     "placeholder": "Escribe tu mensaje...",
@@ -65,5 +69,13 @@
       "tools": "Herramientas"
     },
     "unsavedChanges": "Tienes cambios sin guardar"
+  },
+  "conversations": {
+    "title": "Conversaciones",
+    "subtitle": "Visualiza y gestiona tus interacciones de chat con agentes IA",
+    "searchPlaceholder": "Buscar conversaciones...",
+    "allAgents": "Todos los Agentes",
+    "filters": "Filtros",
+    "continueChat": "Continuar Chat"
   }
 }
