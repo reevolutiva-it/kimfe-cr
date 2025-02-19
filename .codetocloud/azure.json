@@ -1,0 +1,45 @@
+{
+  "projectType": "azd",
+  "iacTypes": [
+    "bicep",
+    "terraform"
+  ],
+  "resources": [
+    {
+      "type": "azurecontainerapp",
+      "instances": [
+        {
+          "name": "kimfecr"
+        }
+      ]
+    }
+  ],
+  "bindings": [],
+  "services": [
+    {
+      "host": "${azurecontainerapp.kimfecr}",
+      "language": "ts",
+      "project": "./",
+      "port": "80"
+    }
+  ],
+  "settings": [
+    {
+      "resource": "${azurecontainerapp.kimfecr}",
+      "envs": [
+        {
+          "name": "NEXT_PUBLIC_CLIENTVAR",
+          "value": ""
+        },
+        {
+          "name": "NODE_ENV",
+          "value": ""
+        },
+        {
+          "name": "SKIP_ENV_VALIDATION",
+          "value": ""
+        }
+      ]
+    }
+  ]
+}
